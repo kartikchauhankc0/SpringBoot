@@ -1,0 +1,22 @@
+package in.lost.filterDemo.filter;
+
+import jakarta.servlet.*;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+
+@Component
+
+public class LoggingFilter  implements Filter {
+
+    @Override
+    public void doFilter(ServletRequest request,
+                         ServletResponse response,
+                         FilterChain chain)
+             throws IOException, ServletException {
+        System.out.println("request enter in logging filter");
+
+         chain.doFilter(request , response);
+
+    }
+}
