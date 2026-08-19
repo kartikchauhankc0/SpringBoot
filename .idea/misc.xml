@@ -5,11 +5,31 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Lecture 19/filterDemo/pom.xml" />
-        <option value="$PROJECT_DIR$/Lecture 13/code/crudSpringBootDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 02/code/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 03/code/MavenDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 04/code/CoreDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 05/code/SpringCoreDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 05/code/SpringCoreDemo2/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 06/code/BeanScopeDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 06/code/BeanInitializationDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 06/code/CircularDependencyDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 07/code/BeanLifeCycleDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 08/code/XMLBasedConfigDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 09/code/SpringCoreDemo/pom.xml" />
         <option value="$PROJECT_DIR$/Lecture 10/code/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 11/code/crudSpringBootDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 12/code/crudSpringBootDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 13/code/crudSpringBootDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 14/code/ServletCrudDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 15/code/JSPDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 15/code/SpringMVCDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 16/code/dtoDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 17/code/exceptionDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 18/code/profileDemo/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-26" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-26" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
 </project>
