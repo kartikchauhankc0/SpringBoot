@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringCoreDemo (2) (in.strikes)" />
+        <module name="filterdemo2" />
         <module name="crudDemo (1)" />
         <module name="demo (1) (com.example)" />
         <module name="SpringMVCDemo" />
@@ -16,6 +17,7 @@
         <module name="SpringCoreDemo" />
         <module name="BeanScopeDemo" />
         <module name="JSPDemo" />
+        <module name="filterDemo" />
         <module name="MavenDemo" />
         <module name="crudDemo" />
         <module name="BeanLifeCycleDemo" />
@@ -24,7 +26,6 @@
         <module name="crudDemo (2)" />
         <module name="SpringCoreDemo2" />
         <module name="XMLBasedConfigDemo" />
-        <module name="filterDemo (1)" />
         <module name="crudSpringBootDemo (2)" />
         <module name="crudSpringBootDemo (1)" />
         <module name="demo (1) (in.strikes)" />
@@ -35,7 +36,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="filterDemo" target="26" />
+      <module name="filterDemo (1)" target="26" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -51,6 +52,7 @@
       <module name="demo (1) (in.strikes)" options="-parameters" />
       <module name="filterDemo" options="-parameters" />
       <module name="filterDemo (1)" options="-parameters" />
+      <module name="filterdemo2" options="-parameters" />
       <module name="profileDemo" options="-parameters" />
     </option>
   </component>
