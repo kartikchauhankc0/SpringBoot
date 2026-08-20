@@ -1,8 +1,8 @@
-package in.lost.filterDemo.controller;
+package lost.filterdemo2.controller;
 
 
-import in.lost.filterDemo.dto.StudentDto;
-import in.lost.filterDemo.service.studentService;
+import lost.filterdemo2.Dto.StudentDto;
+import lost.filterdemo2.service.studentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping ("api/student")
-public class studentController {
+public class StudentController {
 
     studentService studentService;
-    public studentController (studentService studentService){
+    public StudentController (studentService studentService){
         this.studentService=studentService;
     }
 

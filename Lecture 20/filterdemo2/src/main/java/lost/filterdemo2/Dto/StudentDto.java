@@ -1,4 +1,6 @@
-package in.lost.filterDemo.dto;
+package lost.filterdemo2.Dto;
+
+
 
 public class StudentDto {
     private long id;
@@ -29,3 +31,4 @@ public class StudentDto {
         this.email = email;
     }
 }
+

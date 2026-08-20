@@ -1,7 +1,7 @@
-package in.lost.filterDemo.service;
+package lost.filterdemo2.service;
 
 
-import in.lost.filterDemo.dto.StudentDto;
+import lost.filterdemo2.Dto.StudentDto;
 import org.springframework.stereotype.Service;
 
 @Service
