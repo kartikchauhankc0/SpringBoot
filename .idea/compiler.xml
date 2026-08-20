@@ -6,27 +6,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SpringCoreDemo (2) (in.strikes)" />
+        <module name="crudDemo (1)" />
+        <module name="demo (1) (com.example)" />
+        <module name="SpringMVCDemo" />
+        <module name="demo" />
+        <module name="ServletCrudDemo" />
+        <module name="BeanInitializationDemo" />
+        <module name="SpringCoreDemo" />
+        <module name="BeanScopeDemo" />
+        <module name="JSPDemo" />
+        <module name="filterDemo" />
         <module name="MavenDemo" />
         <module name="crudDemo" />
         <module name="BeanLifeCycleDemo" />
         <module name="profileDemo" />
         <module name="SpringCoreDemo (1) (in.strikes)" />
-        <module name="crudDemo (1)" />
+        <module name="crudDemo (2)" />
         <module name="SpringCoreDemo2" />
         <module name="XMLBasedConfigDemo" />
-        <module name="SpringMVCDemo" />
-        <module name="demo" />
         <module name="crudSpringBootDemo (2)" />
         <module name="crudSpringBootDemo (1)" />
         <module name="demo (1) (in.strikes)" />
-        <module name="ServletCrudDemo" />
+        <module name="SpringCoreDemo (1) (in.coderarmy)" />
         <module name="CoreDemo" />
-        <module name="BeanInitializationDemo" />
         <module name="crudSpringBootDemo" />
-        <module name="SpringCoreDemo" />
         <module name="CircularDependencyDemo" />
-        <module name="BeanScopeDemo" />
-        <module name="JSPDemo" />
       </profile>
     </annotationProcessing>
   </component>
@@ -34,11 +39,14 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="crudDemo" options="-parameters" />
       <module name="crudDemo (1)" options="-parameters" />
+      <module name="crudDemo (2)" options="-parameters" />
       <module name="crudSpringBootDemo" options="-parameters" />
       <module name="crudSpringBootDemo (1)" options="-parameters" />
       <module name="crudSpringBootDemo (2)" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="demo (1) (com.example)" options="-parameters" />
       <module name="demo (1) (in.strikes)" options="-parameters" />
+      <module name="filterDemo" options="-parameters" />
       <module name="profileDemo" options="-parameters" />
     </option>
   </component>
