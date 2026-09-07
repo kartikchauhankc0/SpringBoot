@@ -12,7 +12,9 @@
         <module name="demo (1) (com.example)" />
         <module name="SpringMVCDemo" />
         <module name="demo" />
+        <module name="crudSpringBootDemo (3)" />
         <module name="ServletCrudDemo" />
+        <module name="demo (2) (in.strikes)" />
         <module name="BeanInitializationDemo" />
         <module name="SpringCoreDemo" />
         <module name="BeanScopeDemo" />
@@ -47,9 +49,11 @@
       <module name="crudSpringBootDemo" options="-parameters" />
       <module name="crudSpringBootDemo (1)" options="-parameters" />
       <module name="crudSpringBootDemo (2)" options="-parameters" />
+      <module name="crudSpringBootDemo (3)" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="demo (1) (com.example)" options="-parameters" />
       <module name="demo (1) (in.strikes)" options="-parameters" />
+      <module name="demo (2) (in.strikes)" options="-parameters" />
       <module name="filterDemo" options="-parameters" />
       <module name="filterDemo (1)" options="-parameters" />
       <module name="filterdemo2" options="-parameters" />

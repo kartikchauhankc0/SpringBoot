@@ -1,15 +1,15 @@
 package lost.filterdemo2.Filters2;
 
+
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.util.UUID;
 
 //@Component
-public class ResponseHeaderFilter implements Filter {
+public class AuthenticationFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request,
@@ -23,13 +23,19 @@ public class ResponseHeaderFilter implements Filter {
         HttpServletResponse httpResponse=
                 (HttpServletResponse) response;
 
-        String requestId = UUID.randomUUID().toString();
+        String token=httpRequest.getHeader("token");
 
-
-        httpResponse.setHeader("X-Request-ID",requestId);
+        if(token ==null || !token.equals("12345")){
+                httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                httpResponse.setContentType("application/json");
+                httpResponse.getWriter().write(
+                        "{\n" +
+                        "    \"message\":\"authincation is required\"\n" +
+                        "}");
+                return;
+        }
 
         chain.doFilter(request,response);
-
 
     }
 }

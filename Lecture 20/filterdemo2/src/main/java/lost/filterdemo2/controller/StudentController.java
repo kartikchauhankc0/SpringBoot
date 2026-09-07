@@ -2,6 +2,7 @@ package lost.filterdemo2.controller;
 
 
 import lost.filterdemo2.Dto.StudentDto;
+import lost.filterdemo2.Dto.StudentResponseDto;
 import lost.filterdemo2.service.studentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,10 +20,11 @@ public class StudentController {
     }
 
     @PostMapping
-    public ResponseEntity<String> createStudent(@RequestBody StudentDto studentDto){
+    public ResponseEntity<StudentResponseDto> createStudent(@RequestBody StudentDto studentDto){
 
-        studentService.createStudent(studentDto);
-        return ResponseEntity.ok("done");
+        StudentResponseDto responseDto=
+                studentService.createStudent(studentDto);
+        return ResponseEntity.ok(responseDto);
     }
 
 
