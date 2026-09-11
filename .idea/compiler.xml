@@ -30,6 +30,7 @@
         <module name="XMLBasedConfigDemo" />
         <module name="crudSpringBootDemo (2)" />
         <module name="crudSpringBootDemo (1)" />
+        <module name="InterceptorDemo" />
         <module name="demo (1) (in.strikes)" />
         <module name="SpringCoreDemo (1) (in.coderarmy)" />
         <module name="CoreDemo" />
@@ -43,6 +44,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="InterceptorDemo" options="-parameters" />
       <module name="crudDemo" options="-parameters" />
       <module name="crudDemo (1)" options="-parameters" />
       <module name="crudDemo (2)" options="-parameters" />
