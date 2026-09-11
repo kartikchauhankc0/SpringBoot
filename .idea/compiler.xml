@@ -11,6 +11,7 @@
         <module name="crudDemo (1)" />
         <module name="demo (1) (com.example)" />
         <module name="SpringMVCDemo" />
+        <module name="AopDemo" />
         <module name="demo" />
         <module name="crudSpringBootDemo (3)" />
         <module name="ServletCrudDemo" />
@@ -44,6 +45,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AopDemo" options="-parameters" />
       <module name="InterceptorDemo" options="-parameters" />
       <module name="crudDemo" options="-parameters" />
       <module name="crudDemo (1)" options="-parameters" />
