@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentServicesImpl implements StudentService{
 
-    private StudentRepository studentRepository;
+    private  StudentRepository studentRepository;
 
     public StudentServicesImpl(StudentRepository studentRepository){
         this.studentRepository=studentRepository;

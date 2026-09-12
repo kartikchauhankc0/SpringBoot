@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
 public class LoggingDecorator implements StudentService{
 
     private StudentServicesImpl studentServicesimpl;
