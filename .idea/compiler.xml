@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="AopDemoAdvance" />
         <module name="SpringCoreDemo (2) (in.strikes)" />
         <module name="filterdemo2" />
         <module name="crudDemo (1)" />
@@ -40,12 +41,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="AopDemo (1)" target="26" />
       <module name="filterDemo (1)" target="26" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AopDemo" options="-parameters" />
+      <module name="AopDemo (1)" options="-parameters" />
+      <module name="AopDemoAdvance" options="-parameters" />
       <module name="InterceptorDemo" options="-parameters" />
       <module name="crudDemo" options="-parameters" />
       <module name="crudDemo (1)" options="-parameters" />

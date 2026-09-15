@@ -31,10 +31,12 @@
         <option value="$PROJECT_DIR$/Lecture 20/filterdemo2/pom.xml" />
         <option value="$PROJECT_DIR$/Lecture 21 /InterceptorDemo/pom.xml" />
         <option value="$PROJECT_DIR$/Lecture 22/AopDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 23/AopDemo 2/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 23/AopDemoAdvance/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-26" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_26" project-jdk-name="openjdk-26" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
