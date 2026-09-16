@@ -3,81 +3,69 @@ package com.example.AopProxy.aspect;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
 public class LoggingAspect {
-//
-//    @Before("execution(String com.example.AopProxy.service.StudentService.createStudent())") //point cut path
-//    public void logBeforeMethod(JoinPoint joinPoint){ //joinPoint holds the all the information about the target like here StudentService class
-//
-//        Object[] arr=joinPoint.getArgs();
-//
-//        System.out.println("Student is going to be saved");
-////        way to stop the service class to execute
-////        boolean allowed=false;
-////
-////        if(!allowed){
-////            throw new RuntimeException("Method is not allowed");
-////        }
-//    }
-//
-//    @AfterReturning(
-//           value= "execution(" +
-//                   "in.ask.AopDemoAdvance.dto.Student " +
-//                   "com.example.AopProxy.service.StudentService." +
-//                   "createStudent(in.ask.AopDemoAdvance.dto.Student))",
-//            returning = "result") //point cut path
-//    public void logAfterReturningMethod(Student result){
-//
-//          result.setAge(21); // the way to modify the
-//          result.setName("ankit");
-//
-////        System.out.println("logAfterReturningMethod called ");
-//
-//        System.out.println("intercepted createStudent");
-//    }
 
-//
-//@AfterThrowing(
-//        value= "execution(* com.example.AopProxy.service.StudentService.createStudent(..))",
-//            throwing = "exception")
-//public void logAfterThrowingMethod(RuntimeException exception){
-//    System.out.println("Exception type: "+exception.getClass().getName());
-//    System.out.println("Exception Message: "+exception.getMessage());
-//
-//}
-
-//    @After(
-//            value= "execution(* com.example.AopProxy.service.StudentService.createStudent(..))")
-//    public void logAfterMethod(){
-//        System.out.println("log after method called");
-//    }
-
-    @Around(
-            value= "execution(* com.example.AopProxy.service.StudentService.createStudent(..))")
-    public Object logAroundMethod(ProceedingJoinPoint joinPoint) throws Throwable {
-
-        System.out.println("Starting"+ joinPoint.getSignature().getName());
-
-        try{
-            Object result= joinPoint.proceed();
-
-            System.out.println("Execution  successful");
-
-            return result;
-
-        } catch (Exception e) {
-
-            System.out.println("Execution failed: "+ e.getMessage());
-
-            throw e;
-        }
-        finally {
-
-            System.out.println("Execution completed");
-
-        }
+    @Pointcut("within(com.example.AopProxy.service..*)" +
+            "&&" +
+            "execution(public * * (..))")
+    public void logPublicServiceMethod(){
+            //empty body
     }
+
+    //wildcards
+    // com.example.AopProxy.service..* - means any subpackage inside the service package any subpackage or any class can be intercepted
+   // @Before("execution(* com.example.AopProxy.service.StudentService.*(..))")
+    //within designator
+//    @Before("within(com.example.AopProxy.service.StudentService)")
+//    public void logBeforeMethod(){
+//        System.out.println("method intercepted");
+//
+//    }
+
+
+    //bean designator
+//    @Before("bean(studentService)")
+//    public void logBeforeMethod(){
+//        System.out.println("method intercepted");
+//
+//    }
+
+
+//    @Before("within(com.example.AopProxy.service..*)" +
+//            "&&" +
+//            "execution(public * * (..))")
+//    public void logBeforeMethod(){
+//        System.out.println("method intercepted");
+//
+//    }
+
+    //if we don't want to write again and again pointcut designation we can use pointcut method we create that already store the value
+    @Before("logPublicServiceMethod()")
+    public void logBeforeMethod(){
+        System.out.println("method intercepted");
+
+    }
+
+    // execution designator
+//    @Before("execution(com.example.AopProxy.dto.Student " +
+//            "com.example.AopProxy.service.StudentService.createStudent(" +
+//            "com.example.AopProxy.dto.Student)))")
+//    public void logBeforeMethod2(){
+//        System.out.println("method intercepted");
+//
+//    }
 }
+
+
+// there are three designator
+
+//1. execution --method level
+//2. within -- class level
+//3. @annotation -- method level
+//4. bean

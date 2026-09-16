@@ -17,6 +17,7 @@
         <module name="crudSpringBootDemo (3)" />
         <module name="ServletCrudDemo" />
         <module name="demo (2) (in.strikes)" />
+        <module name="AopProxy" />
         <module name="BeanInitializationDemo" />
         <module name="SpringCoreDemo" />
         <module name="BeanScopeDemo" />
@@ -50,6 +51,7 @@
       <module name="AopDemo" options="-parameters" />
       <module name="AopDemo (1)" options="-parameters" />
       <module name="AopDemoAdvance" options="-parameters" />
+      <module name="AopProxy" options="-parameters" />
       <module name="InterceptorDemo" options="-parameters" />
       <module name="crudDemo" options="-parameters" />
       <module name="crudDemo (1)" options="-parameters" />
