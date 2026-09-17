@@ -35,6 +35,7 @@
         <module name="crudSpringBootDemo (1)" />
         <module name="InterceptorDemo" />
         <module name="demo (1) (in.strikes)" />
+        <module name="CustomAop" />
         <module name="SpringCoreDemo (1) (in.coderarmy)" />
         <module name="CoreDemo" />
         <module name="crudSpringBootDemo" />
@@ -52,6 +53,7 @@
       <module name="AopDemo (1)" options="-parameters" />
       <module name="AopDemoAdvance" options="-parameters" />
       <module name="AopProxy" options="-parameters" />
+      <module name="CustomAop" options="-parameters" />
       <module name="InterceptorDemo" options="-parameters" />
       <module name="crudDemo" options="-parameters" />
       <module name="crudDemo (1)" options="-parameters" />
