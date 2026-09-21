@@ -118,7 +118,7 @@ public class StudentRepository {
             preparedStatement.setLong(4,id);
 
 
-            int result= preparedStatement.executeUpdate(sql);
+            int result= preparedStatement.executeUpdate();
 
             if(result==1){
                 System.out.println("update successfully");
@@ -144,7 +144,7 @@ public class StudentRepository {
                 ){
             preparedStatement.setLong(1,id);
 
-            int rowAffected= preparedStatement.executeUpdate(sql);
+            int rowAffected= preparedStatement.executeUpdate();
 
             if(rowAffected==1){
                 System.out.println("delete successfully");
@@ -163,7 +163,7 @@ public class StudentRepository {
     public void getUserById(Long id){
 
         String sql= """
-                    select name,email,age from student
+                    select id,name,email,age from student
                     where id=?
                     """;
         try (
@@ -174,7 +174,7 @@ public class StudentRepository {
                 ){
 
             preparedStatement.setLong(1,id);
-            try ( ResultSet resultSet=preparedStatement.executeQuery(sql)){
+            try ( ResultSet resultSet=preparedStatement.executeQuery()){
 
                 if(resultSet.next()){
                     Student student =mapRow(resultSet);
@@ -219,7 +219,7 @@ public class StudentRepository {
     public void getAllUser(Long id){
 
         String sql= """
-                    select name,email,age from student
+                    select id,name,email,age from student
                     """;
         try (
                 Connection connection= DriverManager.getConnection(url,username,password);
@@ -228,7 +228,7 @@ public class StudentRepository {
                         connection.prepareStatement(sql);
         ){
 
-            try ( ResultSet resultSet=preparedStatement.executeQuery(sql)){
+            try ( ResultSet resultSet=preparedStatement.executeQuery()){
                 List<Student> studentList=new ArrayList<>();
 
                 while(resultSet.next()){
