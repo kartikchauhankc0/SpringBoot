@@ -1,8 +1,7 @@
-package in.raft.springJdbc.service;
+package in.strikes.springJDBCDemo.service;
 
-
-import in.raft.springJdbc.model.Student;
-import in.raft.springJdbc.repository.StudentRepository;
+import in.strikes.springJDBCDemo.model.Student;
+import in.strikes.springJDBCDemo.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -36,10 +36,12 @@
         <option value="$PROJECT_DIR$/Lecture 24/AopProxy/pom.xml" />
         <option value="$PROJECT_DIR$/Lecture 25/CustomAop/pom.xml" />
         <option value="$PROJECT_DIR$/Lecture 26/JdbcDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 27/springJdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/Lecture 27/springJDBCDemo/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_26" project-jdk-name="openjdk-26" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_26" project-jdk-name="openjdk-27" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

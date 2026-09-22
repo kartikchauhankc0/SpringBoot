@@ -1,4 +1,5 @@
-package in.raft.springJdbc.model;
+package in.strikes.springJDBCDemo.model;
+
 public class Student {
     private Long id;
     private String name;

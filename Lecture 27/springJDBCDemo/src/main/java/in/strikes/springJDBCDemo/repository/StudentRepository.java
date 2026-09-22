@@ -1,7 +1,8 @@
-package in.raft.springJdbc.repository;
+package in.strikes.springJDBCDemo.repository;
 
-
-import in.raft.springJdbc.model.Student;
+import in.strikes.springJDBCDemo.model.Student;
+import jakarta.annotation.PostConstruct;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -28,7 +29,7 @@ public class StudentRepository {
 
     public void createStudent(Student student) {
         String sql = """
-                         INSERT INTO student(name, email, age)
+                         INSERT INTO students(name, email, age)
                          VALUES(?, ?, ?)
                          """;
         int rowAffected = jdbcTemplate.update(sql,
@@ -44,7 +45,7 @@ public class StudentRepository {
 
     public void updateStudent(Student student, Long id) {
         String sql = """
-                     UPDATE student
+                     UPDATE students
                      SET name = ?,
                          email = ?,
                          age = ?
@@ -67,7 +68,7 @@ public class StudentRepository {
 
     public void deleteStudent(Long id) {
         String sql = """
-            DELETE from student WHERE id = ?
+            DELETE from students WHERE id = ?
         """;
 
         int rowAffected = jdbcTemplate.update(sql, id);
@@ -83,7 +84,7 @@ public class StudentRepository {
     public Student getStudentById(Long id) {
 
         String sql = """
-                SELECT id, name, email, age FROM student
+                SELECT id, name, email, age FROM students
                 WHERE id = ?
                 """;
 
@@ -94,7 +95,7 @@ public class StudentRepository {
 
     public List<Student> getStudent() {
         String sql = """
-                SELECT id, name, email, age FROM student
+                SELECT id, name, email, age FROM students
                 """;
 
         List<Student> students = jdbcTemplate.query(

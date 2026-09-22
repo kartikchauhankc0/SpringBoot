@@ -1,8 +1,7 @@
-package in.raft.springJdbc.controller;
+package in.strikes.springJDBCDemo.controller;
 
-
-import in.raft.springJdbc.model.Student;
-import in.raft.springJdbc.service.StudentService;
+import in.strikes.springJDBCDemo.model.Student;
+import in.strikes.springJDBCDemo.service.StudentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

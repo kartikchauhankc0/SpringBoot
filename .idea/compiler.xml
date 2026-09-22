@@ -31,6 +31,7 @@
         <module name="SpringCoreDemo (1) (in.strikes)" />
         <module name="crudDemo (2)" />
         <module name="SpringCoreDemo2" />
+        <module name="springJDBCDemo" />
         <module name="XMLBasedConfigDemo" />
         <module name="crudSpringBootDemo (2)" />
         <module name="crudSpringBootDemo (1)" />
@@ -46,6 +47,7 @@
     <bytecodeTargetLevel>
       <module name="AopDemo (1)" target="26" />
       <module name="filterDemo (1)" target="26" />
+      <module name="springJdbc" target="26" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -71,6 +73,8 @@
       <module name="filterDemo (1)" options="-parameters" />
       <module name="filterdemo2" options="-parameters" />
       <module name="profileDemo" options="-parameters" />
+      <module name="springJDBCDemo" options="-parameters" />
+      <module name="springJdbc" options="-parameters" />
     </option>
   </component>
 </project>
