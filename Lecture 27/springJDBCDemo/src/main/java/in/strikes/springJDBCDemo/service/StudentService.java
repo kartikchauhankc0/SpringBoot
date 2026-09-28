@@ -20,7 +20,7 @@ public class StudentService {
     }
 
     public List<Student> getAllStudents() {
-        return studentRepository.getStudent();
+        return studentRepository.getAllStudent();
     }
 
     public Student getStudentById(Long id) {
