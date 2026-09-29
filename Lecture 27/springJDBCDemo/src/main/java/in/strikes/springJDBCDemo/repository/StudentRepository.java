@@ -18,7 +18,8 @@ public class StudentRepository {
 
     private JdbcTemplate jdbcTemplate;
 
-    private StudentRowMapper studentRowMapper=new StudentRowMapper();
+    //private StudentRowMapper studentRowMapper=new StudentRowMapper();
+    private RowMapper<Student> rowMapper=new BeanPropertyRowMapper<>();
 
     public StudentRepository(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate=jdbcTemplate;
@@ -34,7 +35,7 @@ public class StudentRepository {
                 student.getName(),student.getEmail(),student.getAge());
 
         if(rowAffected==1){
-            System.out.println("Create Student succesfully");
+            System.out.println("Create Student successfully");
         }
         else{
             System.out.println("Create Student failed");
@@ -82,9 +83,8 @@ public class StudentRepository {
                     """;
 
             return jdbcTemplate.queryForObject(sql,
-                    studentRowMapper,
+                    rowMapper,
                     id);
-
     }
     public List<Student> getAllStudent(){
 
@@ -92,7 +92,7 @@ public class StudentRepository {
                     select id,name,email,age from student
                     """;
         List<Student> students=jdbcTemplate.query(
-                sql,studentRowMapper);
+                sql,rowMapper);
 
         return students;
     }
