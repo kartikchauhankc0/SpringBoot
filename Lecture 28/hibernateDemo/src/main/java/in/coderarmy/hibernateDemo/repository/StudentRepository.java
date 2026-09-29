@@ -1,84 +1,27 @@
 package in.coderarmy.hibernateDemo.repository;
 
 import in.coderarmy.hibernateDemo.model.Student;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Repository;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
-import java.util.List;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class StudentRepository {
 
-    private JdbcTemplate jdbcTemplate;
+    @PersistenceContext
+    private EntityManager entityManager;
 
-    //private StudentRowMapper studentRowMapper=new StudentRowMapper();
-    private RowMapper<Student> rowMapper=new BeanPropertyRowMapper<>();
-
-    public StudentRepository(JdbcTemplate jdbcTemplate){
-        this.jdbcTemplate=jdbcTemplate;
+    public void save(Student student){
+        entityManager.persist(student);
     }
 
-    public void createStudent(Student student){
-        String sql= """
-                        insert into student(name,email,age)
-                        values(?,?,?)
-                        """;
-
-        int rowAffected=jdbcTemplate.update(sql,
-                student.getName(),student.getEmail(),student.getAge());
-
-        if(rowAffected==1){
-            System.out.println("Create Student successfully");
-        }
-        else{
-            System.out.println("Create Student failed");
-        }
+    public Student findById(Long id){
+        return entityManager.find(Student.class,id);
     }
 
-    public void updateStudent(Student student ,Long id){
-        String sql= """
-                        Update student 
-                        set name =?,
-                            email=?,
-                            age=?
-                        where id =?
-                        """;
-        int rowAffected= jdbcTemplate.update(sql,
-                student.getName(),student.getEmail(),student.getAge(),
-                id);
+    public void remove(Long id){
+        entityManager.remove(id);
 
-        if(rowAffected==1){
-            System.out.println("update successfully");
-        }
-        else{
-            System.out.println("update failed");
-        }
-    }
-    public void deleteStudent(Long id){
-
-        String sql="delete from student where id=?";
-
-        int rowAffected= jdbcTemplate.update(sql,id);
-
-        if(rowAffected==1){
-            System.out.println("delete successfully");
-        }
-        else{
-            System.out.println("deletion failed");
-        }
-    }
-
-    public Student getStudentById(Long id){
-
-        String sql= """
-                    select id,name,email,age from student
-                    where id=?
-                    """;
-
-        return jdbcTemplate.queryForObject(sql,
-                rowMapper,
-                id);
     }
 }

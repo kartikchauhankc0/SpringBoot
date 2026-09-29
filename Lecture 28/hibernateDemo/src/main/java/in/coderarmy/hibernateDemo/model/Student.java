@@ -1,8 +1,16 @@
 package in.coderarmy.hibernateDemo.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Student {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String email;
     private int age;
@@ -13,6 +21,14 @@ public class Student {
         this.name = name;
         this.email = email;
         this.age = age;
+    }
+
+    public Long getId1() {
+        return id1;
+    }
+
+    public void setId1(Long id1) {
+        this.id1 = id1;
     }
 
     public Long getId() {
