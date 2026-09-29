@@ -28,6 +28,7 @@
         <module name="crudDemo" />
         <module name="BeanLifeCycleDemo" />
         <module name="profileDemo" />
+        <module name="hibernateDemo" />
         <module name="SpringCoreDemo (1) (in.strikes)" />
         <module name="crudDemo (2)" />
         <module name="SpringCoreDemo2" />
@@ -72,6 +73,7 @@
       <module name="filterDemo" options="-parameters" />
       <module name="filterDemo (1)" options="-parameters" />
       <module name="filterdemo2" options="-parameters" />
+      <module name="hibernateDemo" options="-parameters" />
       <module name="profileDemo" options="-parameters" />
       <module name="springJDBCDemo" options="-parameters" />
       <module name="springJdbc" options="-parameters" />
