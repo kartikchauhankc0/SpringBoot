@@ -29,15 +29,21 @@ public class StudentService {
         return studentRepository.findById(id);
     }
 
+    @Transactional
     public void updateStudent(Student studentReq,Long id) {
         Student student1=studentRepository.findById(id);
         student1.setName(studentReq.getName());
         student1.setEmail(studentReq.getEmail());
         student1.setAge(studentReq.getAge());
     }
-
+  
     @Transactional
     public void deleteStudent(Long id) {
-        studentRepository.remove(id);
+        Student student=studentRepository.findById(id);
+        if(student==null){
+            throw  new RuntimeException("student is not found");
+
+        }
+        studentRepository.remove(student);
     }
 }

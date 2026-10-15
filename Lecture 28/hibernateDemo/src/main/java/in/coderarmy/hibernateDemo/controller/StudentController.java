@@ -1,6 +1,4 @@
 package in.coderarmy.hibernateDemo.controller;
-
-
 import in.coderarmy.hibernateDemo.model.Student;
 import in.coderarmy.hibernateDemo.service.StudentService;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +34,7 @@ public class StudentController {
         return ResponseEntity.ok(student);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<String> updateStudent(@RequestBody Student student,@PathVariable Long id) {
         studentService.updateStudent(student,id);
         return ResponseEntity.ok("DONE");

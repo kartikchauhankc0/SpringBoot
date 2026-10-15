@@ -20,8 +20,8 @@ public class StudentRepository {
         return entityManager.find(Student.class,id);
     }
 
-    public void remove(Long id){
-        entityManager.remove(id);
+    public void remove(Student student){
+        entityManager.remove(student);
 
     }
 }
